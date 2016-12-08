@@ -1,10 +1,11 @@
 import React from 'react';
-import ImageSlide  from '../components/ImageSlide';
+
+import AceSlide from '../components/AceSlide'
 
 const slide = () => (
-    <ImageSlide style={{ backgroundImage: 'url(images/000.jpg)' }}>
-        <p>Hallo Welt</p>
-    </ImageSlide>
+    <div>
+        <AceSlide />
+    </div>
 );
 
 slide.title = 'Das ist nur ein Test';
