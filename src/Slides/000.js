@@ -1,10 +1,23 @@
 import React from 'react';
-import ImageSlide  from '../components/ImageSlide';
+
+import AceSlide from '../components/AceSlide'
 
 const slide = () => (
-    <ImageSlide style={{ backgroundImage: 'url(images/000.jpg)' }}>
-        <p>Hallo Welt</p>
-    </ImageSlide>
+    <div>
+        <AceSlide
+            inputHeadline="JSX"
+            outputHeadline="Real JS"
+            mainHeadline="Basic JSX to JS"
+            transformOnMount={true}
+            inputCode={`const Test = () => {
+    <div className="link-wrapper">
+        <a href="#jumpto">
+            Link Text
+        </a>
+    </div>
+}`}
+        />
+    </div>
 );
 
 slide.title = 'Das ist nur ein Test';

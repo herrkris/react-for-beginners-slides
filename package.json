@@ -6,11 +6,16 @@
     "react-scripts": "0.8.1"
   },
   "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-standalone": "^6.19.0",
     "react": "^15.4.1",
+    "react-ace": "^4.1.0",
     "react-addons-shallow-compare": "^15.4.1",
     "react-codemirror": "^0.3.0",
     "react-dom": "^15.4.1",
-    "react-presents": "^0.7.1",
+    "react-presents": "https://github.com/jannikegger/react-presents-diva-e.git",
     "react-router": "next",
     "styled-components": "^1.1.2"
   },
