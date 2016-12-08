@@ -44,8 +44,8 @@ class AceSlide extends React.Component {
         super(props);
 
         this.state = {
-            renderedCode: '',
-            writtenCode: ''
+            outputCode: props.outputCode,
+            inputCode: props.inputCode
         };
     }
 
@@ -67,10 +67,16 @@ class AceSlide extends React.Component {
             });
 
             this.setState({
-                renderedCode: transformed.code,
-                writtenCode: newValue
+                outputCode: transformed.code,
+                inputCode: newValue
             })
         } catch (e) {
+        }
+    }
+
+    componentDidMount() {
+        if(this.props.transformOnMount) {
+            this.aceOnChange(this.props.inputCode);
         }
     }
 
@@ -88,7 +94,7 @@ class AceSlide extends React.Component {
                         mode="javascript"
                         theme="monokai"
                         onChange={(v) => this.aceOnChange(v)}
-                        value={this.state.writtenCode}
+                        value={this.state.inputCode}
                         width=""
                         height=""
                     />
@@ -101,7 +107,7 @@ class AceSlide extends React.Component {
                         mode="javascript"
                         theme="monokai"
                         readOnly={true}
-                        value={this.state.renderedCode}
+                        value={this.state.outputCode}
                         width=""
                         height=""
                     />
@@ -115,12 +121,18 @@ AceSlide.propTypes = {
     inputHeadline: PropTypes.string,
     outputHeadline: PropTypes.string,
     mainHeadline: PropTypes.string.isRequired,
+    inputCode: PropTypes.string,
+    outputCode: PropTypes.string,
+    transformOnMount: PropTypes.boolean
 };
 
 AceSlide.defaultProps = {
     inputHeadline: 'Input',
     outputHeadline: 'Output',
     mainHeadline: 'MainHeadline',
+    inputCode: '',
+    outputCode: '',
+    transformOnMount: false
 };
 
 export default AceSlide;
