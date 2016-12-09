@@ -1,25 +1,26 @@
+/* Notes
+* Begrüßung
+* Inhaltliche kurzzusammenfassung
+*   exkurs in die Geschichte - wie haben wir früher programmiert
+*   was ist React und wobei hilft es uns?
+* Bei Fragen bitte Fragen
+* Praktikum ist am Freitag
+* */
+
 import React from 'react';
 
-import AceSlide from '../components/AceSlide'
+import MainSlide from '../components/MainSlide'
 
 const slide = () => (
     <div>
-        <AceSlide
-            inputHeadline="JSX"
-            outputHeadline="Real JS"
-            mainHeadline="Basic JSX to JS"
-            transformOnMount={true}
-            inputCode={`const Test = () => {
-    <div className="link-wrapper">
-        <a href="#jumpto">
-            Link Text
-        </a>
-    </div>
-}`}
+        <MainSlide
+            backgroundImage="images/000.jpg"
+            orangeHeadline="WTF IS"
+            blueHeadline="REACT?"
         />
     </div>
 );
 
-slide.title = 'Das ist nur ein Test';
+slide.title = 'WTF IS REACT?';
 
 export default slide;
