@@ -13,7 +13,6 @@ const AceSlideStyled = styled.div`
 `;
 
 const AceEditorWrapper = styled.div`
-    
     width: 50%;
     flex: 1;
     align-items: stretch;

@@ -2,11 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ImageSlideWrapper = styled.div`
-    display: flex;
-    flex-direction: row; 
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     
     &::after {
@@ -24,6 +22,8 @@ const ImageSlideWrapper = styled.div`
 const ImageSlideContent = styled.div`
     position: relative;
     z-index: 2;
+    height: 100vh;
+    width: 100vw;
 `;
 
 const ImageSlide = ({ children, style }) => (

@@ -1,10 +1,18 @@
 import React from 'react';
-import GifSlide  from '../components/GifSlide';
+
+import MainSlide from '../components/MainSlide'
 
 const slide = () => (
-    <GifSlide src="images/idea.gif" />
+    <div>
+        <MainSlide
+            backgroundImage="images/000.jpg"
+            orangeHeadline="WTF IS"
+            blueHeadline="REACT?"
+            whiteHeadline="AJAX"
+        />
+    </div>
 );
 
-slide.title = 'Das ist nur ein Test';
+slide.title = 'Test';
 
 export default slide;
