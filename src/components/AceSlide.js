@@ -98,19 +98,21 @@ class AceSlide extends React.Component {
                         height=""
                     />
                 </AceEditorWrapper>
-                <AceEditorWrapper>
-                    <AceHeadline>
-                        {this.props.outputHeadline}
-                    </AceHeadline>
-                    <StyledAceEditor
-                        mode="javascript"
-                        theme="monokai"
-                        readOnly={true}
-                        value={this.state.outputCode}
-                        width=""
-                        height=""
-                    />
-                </AceEditorWrapper>
+                {this.props.showOutput &&
+                    <AceEditorWrapper>
+                        <AceHeadline>
+                            {this.props.outputHeadline}
+                        </AceHeadline>
+                        <StyledAceEditor
+                            mode="javascript"
+                            theme="monokai"
+                            readOnly={true}
+                            value={this.state.outputCode}
+                            width=""
+                            height=""
+                        />
+                    </AceEditorWrapper>
+                }
             </AceSlideStyled>
         )
     }
@@ -122,7 +124,8 @@ AceSlide.propTypes = {
     mainHeadline: PropTypes.string.isRequired,
     inputCode: PropTypes.string,
     outputCode: PropTypes.string,
-    transformOnMount: PropTypes.boolean
+    transformOnMount: PropTypes.boolean,
+    showOutput: PropTypes.boolean
 };
 
 AceSlide.defaultProps = {
@@ -131,7 +134,9 @@ AceSlide.defaultProps = {
     mainHeadline: 'MainHeadline',
     inputCode: '',
     outputCode: '',
-    transformOnMount: false
+    transformOnMount: false,
+    showOutput: true
+
 };
 
 export default AceSlide;
