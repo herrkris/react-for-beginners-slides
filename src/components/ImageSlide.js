@@ -6,6 +6,7 @@ const ImageSlideWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     position: relative;
+    background-position: center;
     
     &.no-overlay::after {
         background-color: rgba(192, 142, 72, 0.1);    
