@@ -1,4 +1,9 @@
 /* Notes
+* Typische Art&Weise wie man früher JS geschreiben hat.
+* Jeder von uns und manchen sogar noch heute.
+* In diesem Beispiel noch sehr überschaubar doch man muss sich immer gedanken machen welche Daten wir anzeigen wollen
+* => und wo bzw wie wir das machen!
+*
 * Reflektion: was haben wir gelernt?
 * - das "wie" wir Änderung vornehmen ist meist die häufigste Fehlerursache
 * - Können wir das "wie" ändern wir vlt los werden?

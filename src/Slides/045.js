@@ -3,8 +3,9 @@
 * Zeile für Zeile - Anweisung für Anweisung
 *   Beispiel ist die Programmierung von Microcontroller (Ardunio)
 * Aber auch in JS kann dieses pardigma angewandt werden.
-* Jeder Codeblock ist dabei wie ein Kapitel in einm Buch.
+* Jeder Codeblock ist dabei wie ein Kapitel in einem Buch.
 * Wenn jeder Codeblock einmal durchlaufen wurde, ist das Programm zu ende
+* Und JEDER von uns hat diese art von Code schonmal geschriebn - uns eingenommen (mehrfach ;))
 * */
 
 import React from 'react';

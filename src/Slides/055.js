@@ -1,3 +1,7 @@
+/* Notes
+* Auslesen der aktuellen Anzahl an frameworks (aus .badge)
+* anschließend erhöhen wir den count um 1
+* */
 import React from 'react';
 
 import AceSlide from '../components/AceSlide'
@@ -8,7 +12,7 @@ const slide = () => (
             mainHeadline="Imperatives programmieren"
             inputHeadline="Zeile 3+4: auslesen der Anzahl an frameworks und um eins erhöhen"
             showOutput={false}
-            inputCode={`$('.frameworks').append('<li>React</li>');
+            inputCode={`$('ul.frameworks').append('<li>React</li>');
 
 var frameworkCount = $('.badge').data('count');
 frameworkCount += 1;`}

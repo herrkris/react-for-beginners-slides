@@ -1,3 +1,7 @@
+/* Notes
+* Beispiel für einen typischen codeblock im imperativen CodeStyle
+* Als erstes fügen wir ein neues Framework in unser UL ein.
+* */
 import React from 'react';
 
 import AceSlide from '../components/AceSlide'
@@ -8,7 +12,7 @@ const slide = () => (
             mainHeadline="Imperatives programmieren"
             inputHeadline="Zeile 1: ein neus Framework einfügen"
             showOutput={false}
-            inputCode={`$('.frameworks').append('<li>React</li>');`}
+            inputCode={`$('ul.frameworks').append('<li>React</li>');`}
         />
     </div>
 );

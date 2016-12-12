@@ -1,8 +1,5 @@
 /* Notes
-* Typische Art&Weise wie man früher JS geschreiben hat.
-* Jeder von uns und manchen sogar noch heute.
-* In diesem Beispiel noch sehr überschaubar doch man muss sich immer gedanken machen welche Daten wir anzeigen wollen
-* => und wo bzw wie wir das machen!
+* Darstellung des neuen Badge Counts
 * */
 
 import React from 'react';
@@ -15,7 +12,7 @@ const slide = () => (
             mainHeadline="Imperatives programmieren"
             inputHeadline="Zeile 6: Anzeige wird aktuallisiert"
             showOutput={false}
-            inputCode={`$('.frameworks').append('<li>React</li>');
+            inputCode={`$('ul.frameworks').append('<li>React</li>');
 
 var frameworkCount = $('.badge').data('count');
 frameworkCount += 1;
