@@ -18,6 +18,6 @@ const slide = () => (
   </ImageSlide>
 );
 
-slide.title = 'React programming';
+slide.title = 'Virtual DOM';
 
 export default slide;

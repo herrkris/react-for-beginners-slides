@@ -67,7 +67,7 @@ class Slide extends Component {
         return (
             <ImageSlide style={{
                 backgroundImage: 'url(images/react-elements.jpg)'
-            }}>
+            }} code>
                 {children}
                 {src && (
                     <div style={{ position: 'relative', zIndex: '-1' }}>
@@ -79,6 +79,6 @@ class Slide extends Component {
     }
 }
 
-Slide.title = 'React programming';
+Slide.title = 'React DOM';
 
 export default Slide;

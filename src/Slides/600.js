@@ -48,6 +48,6 @@ const slide = () => (
     </ImageSlide>
 );
 
-slide.title = 'React programming';
+slide.title = 'React Element';
 
 export default slide;
