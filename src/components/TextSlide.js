@@ -31,4 +31,3 @@ const TextSlide = ({ headline, subline, color }) => (
 );
 
 export default TextSlide;
-
