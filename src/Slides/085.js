@@ -1,5 +1,4 @@
 /* Notes
-* Initale Vars deklarieren
 * Ziel: alle Zahlen > 8 sollen in newNums schreiben.
 * */
 
