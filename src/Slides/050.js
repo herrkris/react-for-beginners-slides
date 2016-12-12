@@ -4,16 +4,18 @@
 * */
 import React from 'react';
 
-import AceSlide from '../components/AceSlide'
+import MainSlide from '../components/MainSlide';
+import TopAlignedCode from '../components/TopAlignedCode';
 
 const slide = () => (
     <div>
-        <AceSlide
-            mainHeadline="Imperatives programmieren"
-            inputHeadline="Zeile 1: ein neus Framework einfügen"
-            showOutput={false}
-            inputCode={`$('ul.frameworks').append('<li>React</li>');`}
+        <MainSlide
+            backgroundImage="images/045.jpg"
         />
+        <TopAlignedCode>
+            {`$('ul.frameworks')
+    .append('<li>React</li>');`}
+        </TopAlignedCode>
     </div>
 );
 

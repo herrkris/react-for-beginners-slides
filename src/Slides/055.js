@@ -4,19 +4,21 @@
 * */
 import React from 'react';
 
-import AceSlide from '../components/AceSlide'
+import MainSlide from '../components/MainSlide';
+import TopAlignedCode from '../components/TopAlignedCode';
 
 const slide = () => (
     <div>
-        <AceSlide
-            mainHeadline="Imperatives programmieren"
-            inputHeadline="Zeile 3+4: auslesen der Anzahl an frameworks und um eins erhöhen"
-            showOutput={false}
-            inputCode={`$('ul.frameworks').append('<li>React</li>');
+        <MainSlide
+            backgroundImage="images/045.jpg"
+        />
+        <TopAlignedCode>
+            {`$('ul.frameworks')
+    .append('<li>React</li>');
 
 var frameworkCount = $('.badge').data('count');
 frameworkCount += 1;`}
-        />
+        </TopAlignedCode>
     </div>
 );
 

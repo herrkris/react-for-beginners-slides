@@ -6,17 +6,18 @@
 
 import React from 'react';
 
-import AceSlide from '../components/AceSlide'
+import MainSlide from '../components/MainSlide';
+import TopAlignedCode from '../components/TopAlignedCode';
 
 const slide = () => (
     <div>
-        <AceSlide
-            mainHeadline="Deklaratives programmieren"
-            inputHeadline="Zeile 1+2"
-            showOutput={false}
-            inputCode={`const nums = [0, 1, 2, 3, 5, 8, 13, 20, 42];
-let newNums = [];`}
+        <MainSlide
+            backgroundImage="images/070.jpg"
         />
+        <TopAlignedCode>
+        {`const nums = [0, 1, 2, 3, 5, 8, 13, 21, 34, 42];
+let newNums = [];`}
+        </TopAlignedCode>
     </div>
 );
 
