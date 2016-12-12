@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 import styled from 'styled-components';
 
-import ImageSlide from './ImageSlide'
+import ImageSlide from './ImageSlide';
+import TextSlide from './TextSlide';
 
 const StyledMainSlide = styled.div`
     width: 100vw;
@@ -9,35 +10,13 @@ const StyledMainSlide = styled.div`
     position: relative;
 `;
 
-const LargeHeadline = styled.h1`
-    font-style: italic;
-    font-size: 120px;
-    line-height: 100px;
-    position: absolute;
-`;
-
-const OrangeHeadline = styled(LargeHeadline)`
-    color: #e0631b;
-    bottom: 25%;
-    left: 30%;
-    text-align: left;
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-`;
-
-const BlueHeadline = styled(LargeHeadline)`
-    color: #00306a;
-    bottom: 15%;
-    left: 14%;
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);
-`;
-
 const WhiteHeadline = styled.h3`
+    font-size: 9vw;
+    font-family: Roboto;
     color: white;
     position: absolute;
-    right: 50px;
+    right: 90px;
     bottom: 10px;
-    font-size: 80px;
-    letter-spacing: 10px;
 `;
 
 const MainSlide = (props, {style}) => (
@@ -47,8 +26,15 @@ const MainSlide = (props, {style}) => (
             style={{backgroundImage: `url(${props.backgroundImage})`}}
             hideColoredOverlay={props.noColoredImageOverlay}
         >
-            {props.orangeHeadline && <OrangeHeadline>{props.orangeHeadline}</OrangeHeadline>}
-            {props.blueHeadline && <BlueHeadline>{props.blueHeadline}</BlueHeadline>}
+            <div style={{
+              position: 'absolute',
+              bottom: '6vh',
+              left: '50%',
+              transform: 'translateX(-50%)'
+            }}>
+                <TextSlide headline={props.orangeHeadline} subline={props.blueHeadline} />
+            </div>
+
             {props.whiteHeadline && <WhiteHeadline>{props.whiteHeadline}</WhiteHeadline>}
         </ImageSlide>
 

@@ -13,7 +13,8 @@ const slide = () => (
     <div>
         <MainSlide
             backgroundImage="images/020.jpg"
-            orangeHeadline="hat funkioniert..."
+            orangeHeadline="und?"
+            blueHeadline="hat funktioniert!"
         />
     </div>
 );

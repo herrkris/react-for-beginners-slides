@@ -16,7 +16,8 @@ const slide = () => (
     <div>
         <MainSlide
             backgroundImage="images/040.jpg"
-            orangeHeadline="Server & Client nicht mehr in sync"
+            orangeHeadline="synchron?"
+            blueHeadline="nope - nicht mehr"
         />
     </div>
 );
