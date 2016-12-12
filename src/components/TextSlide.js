@@ -11,6 +11,7 @@ const Headline = styled.h1`
   font-family: Roboto;
   color: ${props => props.color ? props.color : '#B74E00'};
   margin: 0;
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
  `;
 
 const Subline = styled.h2`
@@ -19,6 +20,7 @@ const Subline = styled.h2`
   color: ${props => props.color ? props.color : '#002452'};
   text-transform: uppercase;
   margin-top: -6vw;
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);
 `;
 
 const TextSlide = ({ headline, subline, color }) => (

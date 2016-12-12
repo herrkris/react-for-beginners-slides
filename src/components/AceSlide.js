@@ -10,6 +10,7 @@ const Babel = require('../../node_modules/babel-standalone/babel.min.js');
 const AceSlideStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
+    base-font: 60px;
 `;
 
 const AceEditorWrapper = styled.div`
@@ -22,7 +23,20 @@ const StyledAceEditor = styled(AceEditor)`
     width: 100%;
     height: 80vh;
     border: 2px solid #ccc;
+    .ace_line,
+    .ace_gutter-cell {
+        font-size: 25px !important; 
+        line-height: 30px !important; 
+        height: 36px !important; 
+    }
+    textarea {
+        font-size: 25px !important; 
+        line-height: 30px !important; 
+    }
 `;
+// !important - I know...I need to pay for this
+// but it was a long day...
+// forgive me
 
 const AceHeadline = styled.h2`
     display: block;
@@ -124,8 +138,8 @@ AceSlide.propTypes = {
     mainHeadline: PropTypes.string.isRequired,
     inputCode: PropTypes.string,
     outputCode: PropTypes.string,
-    transformOnMount: PropTypes.boolean,
-    showOutput: PropTypes.boolean
+    transformOnMount: PropTypes.bool,
+    showOutput: PropTypes.bool
 };
 
 AceSlide.defaultProps = {
