@@ -8,10 +8,6 @@ const ImageSlideWrapper = styled.div`
     position: relative;
     background-position: center;
     
-    &.no-overlay::after {
-        background-color: rgba(192, 142, 72, 0.1);    
-    }
-    
     &::after {
         content: '';
         position: absolute;
@@ -20,7 +16,9 @@ const ImageSlideWrapper = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(192, 142, 72, .3); 
+        background-color: rgba(192, 142, 72, ${props => (
+            props.code ? '.9' : props.noOverlay ? '.1' : '.5' 
+        )}); 
     }
 `;
 
@@ -31,8 +29,8 @@ const ImageSlideContent = styled.div`
     width: 100vw;
 `;
 
-const ImageSlide = ({ children, style, hideColoredOverlay }) => (
-    <ImageSlideWrapper style={style} className={hideColoredOverlay && "no-overlay"}>
+const ImageSlide = ({ children, style, hideColoredOverlay, code }) => (
+    <ImageSlideWrapper style={style} code={code} noOverlay={hideColoredOverlay}>
         <ImageSlideContent>
             {children}
         </ImageSlideContent>
@@ -40,7 +38,12 @@ const ImageSlide = ({ children, style, hideColoredOverlay }) => (
 );
 
 ImageSlide.propTypes = {
-    hideColoredOverlay: PropTypes.bool
+    hideColoredOverlay: PropTypes.bool,
+    code: PropTypes.bool,
+};
+
+ImageSlide.defaultProps = {
+    code: false,
 };
 
 export default ImageSlide;

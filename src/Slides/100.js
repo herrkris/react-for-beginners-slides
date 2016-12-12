@@ -9,7 +9,7 @@ const slide = () => (
             outputHeadline="Real JS"
             mainHeadline="Basic JSX to JS"
             transformOnMount={true}
-            showOutput={false}
+            showOutput={true}
             inputCode={`const Test = () => {
     <div className="link-wrapper">
         <a href="#jumpto">
