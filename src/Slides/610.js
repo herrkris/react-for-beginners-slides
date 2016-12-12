@@ -64,6 +64,6 @@ class Slide extends Component {
     }
 }
 
-Slide.title = 'React programming';
+Slide.title = 'React Element example';
 
 export default Slide;

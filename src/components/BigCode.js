@@ -8,8 +8,10 @@ const BigCode = styled.code`
     color: ${props => props.fade ? 'rgba(0, 36, 82, .3)' : '#002452'};
     display: block;
     margin-bottom: 3vh;
+    margin-left: ${props => props.indent ? `${props.indent * 3}vw` : 0};
     text-align: ${props => props.align ? props.align : 'center'};
     transition: color .125s ease-in-out;
+    white-space: nowrap;
 `;
 
 export default BigCode;

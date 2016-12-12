@@ -17,6 +17,6 @@ const slide = () => (
   </ImageSlide>
 );
 
-slide.title = 'React programming';
+slide.title = 'HTML DOM';
 
 export default slide;

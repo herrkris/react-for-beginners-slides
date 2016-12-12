@@ -31,7 +31,6 @@ class Slide extends Component {
         const { code  } = this.state;
         let src;
         try {
-            console.log(this.state.code.slice(0, -1));
             const expression = eval(this.state.code.slice(0, -1));
             if (expression) {
                if (expression.props.src) {
@@ -67,7 +66,7 @@ class Slide extends Component {
         return (
             <ImageSlide style={{
                 backgroundImage: 'url(images/react-elements.jpg)'
-            }}>
+            }} code>
                 {children}
                 {src && (
                     <div style={{ position: 'relative', zIndex: '-1' }}>
@@ -79,6 +78,6 @@ class Slide extends Component {
     }
 }
 
-Slide.title = 'React programming';
+Slide.title = 'React DOM';
 
 export default Slide;

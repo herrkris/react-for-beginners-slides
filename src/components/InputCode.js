@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import AutoInput from 'react-input-autosize';
 
 const InputCode = styled(AutoInput)`
+    margin-left: ${props => props.indent ? `${props.indent * 3}vw` : 0};
     input {
         background-color: transparent;
         font-size: 3.3vw;
