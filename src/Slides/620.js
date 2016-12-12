@@ -31,7 +31,6 @@ class Slide extends Component {
         const { code  } = this.state;
         let src;
         try {
-            console.log(this.state.code.slice(0, -1));
             const expression = eval(this.state.code.slice(0, -1));
             if (expression) {
                if (expression.props.src) {
