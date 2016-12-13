@@ -32,7 +32,7 @@ function addFramework(framework) {
 
     updateCount(newCount);
 
-    appendFramework(appendFrameWork);
+    appendFramework(framework);
 }
 
 // WAS

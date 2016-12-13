@@ -10,7 +10,7 @@ const CenteredCode = styled(Code)`
     background: rgba(255,255,255, 0.3);
     transform: translateX(-50%);
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     
     pre {
         margin: 10px 15px;
