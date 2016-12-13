@@ -57,6 +57,6 @@ const slide = () => (
     </ImageSlide>
 );
 
-slide.title = 'React Component'
+slide.title = 'React Component';
 
 export default slide;
